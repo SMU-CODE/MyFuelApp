@@ -21,16 +21,17 @@ class LinkingWithVehicleScreen extends StatelessWidget {
     final isActive = userVehicle.isActive == true;
     final lastRefuelDateStr = userVehicle.lastRefuelDate;
 
-    final lastRefuelDate = DateTime.tryParse(lastRefuelDateStr ?? '');
-
-    final canBook =
-        lastRefuelDateStr != null &&
-        lastRefuelDateStr.trim().isEmpty &&
-        lastRefuelDateStr != 'N/A' &&
-        lastRefuelDate != null &&
-        lastRefuelDate.isAfter(
+    final lastRefuelDate = DateTime.tryParse(lastRefuelDateStr ?? 'N/A');
+    bool canBook = false;
+    if (lastRefuelDateStr == null ||
+        lastRefuelDateStr.trim().isEmpty ||
+        lastRefuelDateStr == 'N/A' ||
+        lastRefuelDate == '' ||
+        lastRefuelDate!.isAfter(
           DateTime.now().subtract(const Duration(days: 5)),
-        );
+        )) {
+      canBook = true;
+    }
 
     final textTheme = Theme.of(context).textTheme;
 

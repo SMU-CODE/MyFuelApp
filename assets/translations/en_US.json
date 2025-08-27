@@ -1,0 +1,23 @@
+{
+  "field": "Field",
+  "field_required": "{field} is required",
+  "min_length": "{field} must be at least {min} characters",
+  "max_length": "{field} must be at most {max} characters",
+  "username_invalid": "{field} can only contain letters, numbers, dots, hyphens and underscores",
+  "email_invalid": "Please enter a valid email address",
+  "phone_invalid": "Please enter a valid phone number",
+  "password_weak": "Password must contain at least 8 characters including uppercase, lowercase, number and special character",
+  "password_mismatch": "Passwords do not match",
+  "name_invalid": "{field} can only contain letters and spaces",
+  "otp_invalid": "Please enter a valid OTP (4-6 digits)",
+  "digits_only": "{field} can only contain numbers",
+  "arabic_only": "{field} can only contain Arabic characters",
+  "english_only": "{field} can only contain English characters",
+  "url_invalid": "Please enter a valid URL",
+  "date_invalid": "Please enter a valid date (YYYY-MM-DD)",
+  "credit_card_invalid": "Please enter a valid credit card number",
+  "postal_code_invalid": "Please enter a valid postal code",
+  "pattern_invalid": "{field} does not match the required pattern",
+  "regex_error": "Invalid validation pattern for {field}",
+  "time_invalid": "Please enter a valid time"
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46045236897",
+    "project_id": "myfuelapp-4d5d8",
+    "storage_bucket": "myfuelapp-4d5d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46045236897:android:70508d9d5ef8986ccf6ae0",
+        "android_client_info": {
+          "package_name": "com.mu_code.myfuelapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEswBDK5xNo8t2wJ_woAjvqJWe-DmxUBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

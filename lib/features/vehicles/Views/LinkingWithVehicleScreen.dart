@@ -22,8 +22,9 @@ class LinkingWithVehicleScreen extends StatelessWidget {
     final lastRefuelDateStr = userVehicle.lastRefuelDate;
 
     final lastRefuelDate = DateTime.tryParse(lastRefuelDateStr ?? 'N/A');
-    bool canBook = false;
-    if (lastRefuelDateStr == null ||
+    bool canBook = userVehicle.canBook ?? false;
+
+    /* if (lastRefuelDateStr == null ||
         lastRefuelDateStr.trim().isEmpty ||
         lastRefuelDateStr == 'N/A' ||
         lastRefuelDate == '' ||
@@ -31,7 +32,7 @@ class LinkingWithVehicleScreen extends StatelessWidget {
           DateTime.now().subtract(const Duration(days: 5)),
         )) {
       canBook = true;
-    }
+    } */
 
     final textTheme = Theme.of(context).textTheme;
 
@@ -42,14 +43,14 @@ class LinkingWithVehicleScreen extends StatelessWidget {
       child: InkWell(
         borderRadius: AppSize.borderRadiusMedium,
         onTap: () {
-          Get.snackbar(
+          /* Get.snackbar(
             'معلومات المركبة',
             'سيتم عرض تفاصيل المركبة ${Parser.parseString(userVehicle.ownerName)}',
             snackPosition: SnackPosition.BOTTOM,
             backgroundColor: AppColors.info.withValues(alpha: 0.7),
             colorText: AppColors.onPrimary,
             margin: AppSize.paddingAll,
-          );
+          ); */
         },
         child: Padding(
           padding: AppSize.paddingAll,

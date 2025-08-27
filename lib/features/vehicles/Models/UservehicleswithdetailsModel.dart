@@ -9,7 +9,7 @@ class UservehicleswithdetailsModel {
   final String? engineNumber;
   final String? plateNumber;
   final String? lastRefuelDate;
-  final bool? isActive;
+  final bool? isActive;  final bool? canBook;
   final String? ownerPhone;
   final String? modelYear;
   final String? color;
@@ -24,7 +24,7 @@ class UservehicleswithdetailsModel {
     this.engineNumber,
     this.plateNumber,
     this.lastRefuelDate,
-    this.isActive,
+    this.isActive, this.canBook,
     this.ownerPhone,
     this.modelYear,
     this.color,
@@ -45,7 +45,7 @@ class UservehicleswithdetailsModel {
       engineNumber: Parser.parseString(json['engine_number']),
       plateNumber: Parser.parseString(json['plate_number']),
       lastRefuelDate: Parser.parseString(json['last_refuel_date']),
-      isActive: Parser.parseBool(json['is_active']),
+      isActive: Parser.parseBool(json['is_active']),canBook: Parser.parseBool(json['canBook']),
       ownerPhone: Parser.parseString(json['owner_phone']),
       modelYear: Parser.parseString(json['model_year']),
       color: Parser.parseString(json['color']),
@@ -53,9 +53,6 @@ class UservehicleswithdetailsModel {
     );
   }
 
-  get canBook => true;
-  
-  //TODO
 
   /// Convert to JSON
   Map<String, dynamic> toJson() {
@@ -68,7 +65,7 @@ class UservehicleswithdetailsModel {
       'engine_number': engineNumber,
       'plate_number': plateNumber,
       'last_refuel_date': lastRefuelDate,
-      'is_active': isActive,
+      'is_active': isActive,'canBook': canBook,
       'owner_phone': ownerPhone,
       'model_year': modelYear,
       'color': color,
